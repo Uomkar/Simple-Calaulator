@@ -20,8 +20,6 @@ while True:
     event , values = window.read()
     if event == sg.WIN_CLOSED:
         break
-    if event == 'Calculate':
-        print(values)
     if event in ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9','.']:
         data.append(event)
         num = ''.join(data)
@@ -30,7 +28,7 @@ while True:
         full_operator.append(''.join(data))
         data = []
         full_operator.append(event)
-        window['output'].update(full_operator)
+        window['output'].update('')
     if event == 'Calc':
         full_operator.append(''.join(data))
         try:
