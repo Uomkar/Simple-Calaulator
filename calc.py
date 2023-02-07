@@ -37,8 +37,8 @@ while True:
             res = eval(''.join(full_operator))
             window['output'].update(res)
             full_operator = []
-        except:
-            window['output'].update("Infinity")
+        except Exception as e:
+            window['output'].update(e)
 
     if event == 'AC':
         full_operator = []
